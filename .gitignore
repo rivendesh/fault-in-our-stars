@@ -1,2 +1,5 @@
 # Python virtual environment
 .env/
+
+# Mac virtual docs
+.virtual_documents/
