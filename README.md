@@ -3,8 +3,8 @@
 - [567 Machine Learning Project - Spring 2026](#567-machine-learning-project---spring-2026)
   - [Introduction](#introduction)
   - [Proposed Project Flowcharts](#proposed-project-flowcharts)
-          - [(i.) Classifying TESS/Kepler events as transit, non-transit or false positive with 2 approaches](#i-classifying-tesskepler-events-as-transit-non-transit-or-false-positive-with-2-approaches)
-          - [(ii). Classifying celestial objects into exoplanets, non exo, binary systems and variable stars](#ii-classifying-celestial-objects-into-exoplanets-non-exo-binary-systems-and-variable-stars)
+        - [(i). Classifying TESS/Kepler events as transit, non-transit or false positive with 2 approaches](#i-classifying-tesskepler-events-as-transit-non-transit-or-false-positive-with-2-approaches)
+        - [(ii). Classifying celestial objects into exoplanets, non exo, binary systems and variable stars](#ii-classifying-celestial-objects-into-exoplanets-non-exo-binary-systems-and-variable-stars)
 - [Links \& References](#links--references)
 
 
@@ -14,7 +14,7 @@ Project for CSCI 567 Machine Learning in Spring 2026 on light curve analysis of 
 
 ## Proposed Project Flowcharts
 
-###### (i.) Classifying TESS/Kepler events as transit, non-transit or false positive with 2 approaches 
+##### (i). Classifying TESS/Kepler events as transit, non-transit or false positive with 2 approaches 
 
 ```mermaid
 
@@ -73,7 +73,7 @@ K --> L["Final Results\nDetected planets\nEstimated properties"]
 
 ```
 
-###### (ii). Classifying celestial objects into exoplanets, non exo, binary systems and variable stars
+##### (ii). Classifying celestial objects into exoplanets, non exo, binary systems and variable stars
 
 ```mermaid
 flowchart TD
