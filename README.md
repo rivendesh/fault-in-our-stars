@@ -78,3 +78,31 @@ K --> L["Final Results\nDetected planets\nEstimated properties"]
 > 4. [Beginner Introductory Notebooks for `Lightkurve`](https://spacetelescope.github.io/mast_notebooks/notebooks/Kepler/beginner.html)
 > 5. [Getting and Processing `Lightkurve` data](https://spacetelescope.github.io/mast_notebooks/notebooks/Kepler/lightkurve_analyzing_lc_products/lightkurve_analyzing_lc_products.html)
 > 6. [Kaggle Notebook on Exoplanet Detection with CNNs](https://www.kaggle.com/code/huyghens/ai-model-for-the-detection-of-exoplanets/notebook#Future-work)
+>
+> 7. # Another Idea
+```mermaid
+flowchart TD
+
+A1[Planet Dataset<br>NASA Exoplanet Archive<br>Label: planet]
+A2[Binary Dataset<br>Villanova EB Catalog<br>Label: binary]
+A3[Variable Dataset<br>MAST Catalog<br>Label: variable]
+
+A1 --> B[Combine Datasets<br>Unified Labels: planet / binary / variable]
+A2 --> B
+A3 --> B
+
+B --> C[Download Light Curves]
+
+C --> D[Preprocessing<br>clean + normalize + fold]
+
+D --> E[Convert to Images]
+
+E --> F[Train CNN]
+
+F --> G[Evaluate Model]
+
+```
+# Links and References
+> [!NOTE]
+> 1. [Kepler Eclipsing Binaries](https://archive.stsci.edu/kepler/eclipsing_binaries.html)
+> 2. [K2 Variable Star Catalog](https://archive.stsci.edu/hlsp/psfk2?utm_source=chatgpt.com)
