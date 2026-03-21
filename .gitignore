@@ -3,3 +3,6 @@
 
 # Mac virtual docs
 .virtual_documents/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
