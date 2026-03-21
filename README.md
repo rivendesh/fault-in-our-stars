@@ -5,16 +5,15 @@
   - [Proposed Project Flowcharts](#proposed-project-flowcharts)
         - [(i). Classifying TESS/Kepler events as transit, non-transit or false positive with 2 approaches](#i-classifying-tesskepler-events-as-transit-non-transit-or-false-positive-with-2-approaches)
         - [(ii). Classifying celestial objects into exoplanets, non exo, binary systems and variable stars](#ii-classifying-celestial-objects-into-exoplanets-non-exo-binary-systems-and-variable-stars)
-- [Links \& References](#links--references)
+  - [Links \& References](#links--references)
 
-
-## Introduction 
+## Introduction
 
 Project for CSCI 567 Machine Learning in Spring 2026 on light curve analysis of distant stars to detect exoplanets.
 
 ## Proposed Project Flowcharts
 
-##### (i). Classifying TESS/Kepler events as transit, non-transit or false positive with 2 approaches 
+##### (i). Classifying TESS/Kepler events as transit, non-transit or false positive with 2 approaches
 
 ```mermaid
 
@@ -100,9 +99,10 @@ F --> G[Evaluate Model]
 
 ---
 
-# Links & References
+## Links & References
 
 > [!NOTE]
+>
 > 1. [NASA EXP Archives](https://exoplanetarchive.ipac.caltech.edu/index.html)
 > 2. [MAST Landing Page](https://mast.stsci.edu/portal/Mashup/Clients/Mast/Portal.html)
 > 3. [MAST Notebook Repo](https://spacetelescope.github.io/mast_notebooks/notebooks/GALEX/mis_mosaic/mis_mosaic.html#about-this-notebook)
@@ -110,3 +110,4 @@ F --> G[Evaluate Model]
 > 5. [Getting and Processing `Lightkurve` data](https://spacetelescope.github.io/mast_notebooks/notebooks/Kepler/lightkurve_analyzing_lc_products/lightkurve_analyzing_lc_products.html)
 > 6. [Kaggle Notebook on Exoplanet Detection with CNNs](https://www.kaggle.com/code/huyghens/ai-model-for-the-detection-of-exoplanets/notebook#Future-work)
 > 7. [Kaggle Notebook AI Model for the Detection of Exoplanets](https://www.kaggle.com/code/jaimetrickz/exoplanet-classification/notebook#KNN-Classifier)
+> 8. [Kepler Eclipsing Binary Catalog](https://keplerebs.villanova.edu/)
