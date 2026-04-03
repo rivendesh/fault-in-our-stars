@@ -147,6 +147,9 @@ When first starting to explore retrieving data with MAST, we noticed that it too
 
 These methods vary with different levels of convenience (and ease-of-use in syntax) but with the trade-off of having less control over the data/mission we were querying. Here's a table talking about ways to query the MAST dataset and what these methods allow you to have access to.
 
+> [!TIP]
+> These three are just different client layers on top of MAST and the difference in the efficiency comes down ot query overhead and how much client-side work happens before/after the download.
+
 | Tool                                      | Scope                                                                                                                                                                                                                                                   | Best at                                                                                                                   | Kepler/K2-specific behavior                                                                                                                                                                                                         | Main trade-off                                                                                                                     |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | **`Observations`**                        | The primary MAST interface for observational metadata and products across missions; it uses the MAST Portal API and returns Astropy `Table` objects. It is described as the recommended starting point for most users. ([astroquery.readthedocs.io][1]) | Cross-mission searches, rich metadata filters, product discovery, and downloads. ([astroquery.readthedocs.io][1])         | You can query Kepler/K2 as part of the broader archive, but it is mission-agnostic rather than Kepler/K2-specialized. ([astroquery.readthedocs.io][1])                                                                              | More flexible, but usually more manual filtering on your side. ([astroquery.readthedocs.io][1])                                    |
@@ -159,8 +162,6 @@ These methods vary with different levels of convenience (and ease-of-use in synt
 [4]: https://lightkurve.github.io/lightkurve/reference/search.html "Downloading data — Lightkurve "
 [5]: https://lightkurve.github.io/lightkurve/reference/api/lightkurve.search_lightcurve.html "lightkurve.search_lightcurve — Lightkurve "
 
-> [!TIP]
-> These three are just different client layers on top of MAST and the difference in the efficiency comes down ot query overhead and how much client-side work happens before/after the download.
 
 Before we can apply machine learning techniques, or even build the combined dataset, we need to explore these ways of fetching MAST data and compare them for efficiency and use-case.
 
