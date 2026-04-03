@@ -143,7 +143,9 @@ style J1 fill:#555,color:#fff,stroke:#555
 
 ### The Data Challenge
 
-When first starting to explore retrieving data with MAST, we noticed that there are multiple ways to query the dataset(s). These methods vary with different levels of convenience (and ease-of-use in syntax) but with the trade-off of having less control over the data/mission we were querying. Here's a table talking about ways to query the MAST dataset and what these methods allow you to hae access to.
+When first starting to explore retrieving data with MAST, we noticed that it took close to 40s to run a query the NASA Exoplanet Archive with `astropy`. While this was to query the Archive and not MAST, we found that there was a different way to query MAST not just using `astropy`, but other methods as well.
+
+These methods vary with different levels of convenience (and ease-of-use in syntax) but with the trade-off of having less control over the data/mission we were querying. Here's a table talking about ways to query the MAST dataset and what these methods allow you to have access to.
 
 | Tool                                      | Scope                                                                                                                                                                                                                                                   | Best at                                                                                                                   | Kepler/K2-specific behavior                                                                                                                                                                                                         | Main trade-off                                                                                                                     |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -156,6 +158,11 @@ When first starting to explore retrieving data with MAST, we noticed that there 
 [3]: https://lightkurve.github.io/lightkurve/tutorials/1-getting-started/searching-for-data-products.html "Searching & downloading Kepler, K2, and TESS data — Lightkurve "
 [4]: https://lightkurve.github.io/lightkurve/reference/search.html "Downloading data — Lightkurve "
 [5]: https://lightkurve.github.io/lightkurve/reference/api/lightkurve.search_lightcurve.html "lightkurve.search_lightcurve — Lightkurve "
+
+> [!TIP]
+> These three are just different client layers on top of MAST and the difference in the efficiency comes down ot query overhead and how much client-side work happens before/after the download.
+
+Before we can apply machine learning techniques, or even build the combined dataset, we need to explore these ways of fetching MAST data and compare them for efficiency and use-case.
 
 ---
 
