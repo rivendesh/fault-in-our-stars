@@ -2,99 +2,130 @@
 
 - [567 Machine Learning Project - Spring 2026](#567-machine-learning-project---spring-2026)
   - [Introduction](#introduction)
-  - [Proposed Project Flowcharts](#proposed-project-flowcharts)
-        - [(i). Classifying TESS/Kepler events as transit, non-transit or false positive with 2 approaches](#i-classifying-tesskepler-events-as-transit-non-transit-or-false-positive-with-2-approaches)
-        - [(ii). Classifying celestial objects into exoplanets, non exo, binary systems and variable stars](#ii-classifying-celestial-objects-into-exoplanets-non-exo-binary-systems-and-variable-stars)
+  - [Combined Project Flowchart](#combined-project-flowchart)
   - [Links \& References](#links--references)
 
 ## Introduction
 
 Project for CSCI 567 Machine Learning in Spring 2026 on light curve analysis of distant stars to detect exoplanets.
 
-## Proposed Project Flowcharts
-
-##### (i). Classifying TESS/Kepler events as transit, non-transit or false positive with 2 approaches
-
-```mermaid
-
-flowchart TD
-
-A["Raw Light Curve Data\n(Kepler / TESS)"]
---> B["Preprocessing\nCleaning, detrending, normalization"]
-
-%% -------- Traditional Pipeline --------
-B --> C
-
-subgraph S1["Traditional + Feature-Based Pipeline"]
-C["BLS\nDetect dips & extract features"]
---> D["XGBoost / Random Forest\nClassify transit vs non-transit"]
-end
-
-%% -------- Deep Learning Pipeline --------
-B --> E
-
-subgraph S2["Time-Series ML Pipeline"]
-E["Raw Light Curve Input"]
---> F["CNN / LSTM / TCN\nDetect transit patterns"]
-end
-
-%% -------- Merge --------
-D --> G["Candidate Transit Events"]
-F --> G
-
-%% -------- Optional Localization --------
-G --> H
-
-subgraph S3["Transit Localization (Optional)"]
-H["U-Net / TCN\nLabel transit start & end"]
-end
-
-%% -------- Parameter Estimation --------
-H --> I
-
-subgraph S4["Parameter Estimation"]
-
-I["Physical Model\nMandel & Agol\nFit & estimate parameters"]
-
-I --> J["ML Regression (Optional)\nPredict planet properties"]
-
-end
-
-%% -------- Evaluation --------
-J --> K
-
-subgraph S5["Evaluation & Analysis"]
-K["Metrics:\nPrecision, Recall, ROC\nRMSE, MAE\nFeature importance\nInjection tests"]
-end
-
-%% -------- Final Output --------
-K --> L["Final Results\nDetected planets\nEstimated properties"]
-
-```
-
-##### (ii). Classifying celestial objects into exoplanets, non exo, binary systems and variable stars
+## Combined Project Flowchart
 
 ```mermaid
 flowchart TD
 
-A1[Planet Dataset<br>NASA Exoplanet Archive<br>Label: planet]
-A2[Binary Dataset<br>Villanova EB Catalog<br>Label: binary]
-A3[Variable Dataset<br>MAST Catalog<br>Label: variable]
+%% LEFT SIDE
 
-A1 --> B[Combine Datasets<br>Unified Labels: planet / binary / variable]
-A2 --> B
-A3 --> B
+subgraph A["Multi-source ingestion"]
+    style A stroke-dasharray: 5 5, stroke:#888
+    A1["KOI / Villanova / MAST
+Exoplanet, EB & variable catalogs"]
+    A2["Combine datasets
+Confirmed exoplanet / binary / variable / FP"]
+    A1 --> A2
+end
 
-B --> C[Download Light Curves]
+A2 --> B1["Raw light curve data
+Kepler / TESS"]
+B1 --> B2["Preprocessing
+Clean, normalize"]
 
-C --> D[Preprocessing<br>clean + normalize + fold]
+subgraph P1["Traditional"]
+    style P1 stroke-dasharray: 5 5, stroke:#888
+    C1["BLS
+Detect dips"]
+    C2["XGBoost / RF
+Classify"]
+    C1 --> C2
+end
 
-D --> E[Convert to Images]
+subgraph P2["Image-based"]
+    style P2 stroke-dasharray: 5 5, stroke:#888
+    D1["Fold & convert"]
+    D2["Train CNN
+Classifier"]
+    D3["4-class out"]
+    D1 --> D2 --> D3
+end
 
-E --> F[Train CNN]
+subgraph P3["Time-series ML"]
+    style P3 stroke-dasharray: 5 5, stroke:#888
+    E1["Light curve
+input"]
+    E2["CNN / LSTM / TCN
+Patterns"]
+    E1 --> E2
+end
 
-F --> G[Evaluate Model]
+B2 --> C1
+B2 --> D1
+B2 --> E1
 
+C2 --> F1
+D3 --> F1
+E2 --> F1
+
+F1["Candidate transit events
+Merged from all pipelines"]
+
+%% RIGHT SIDE
+
+F1 --> G1
+
+subgraph B["Parameter estimation"]
+    style B stroke-dasharray: 5 5, stroke:#888
+    G1["Physical model
+Mandel & Agol transit fit"]
+    G2["ML regression
+Predict planet properties"]
+    G1 --> G2
+end
+
+subgraph C["Evaluation & analysis"]
+    style C stroke-dasharray: 5 5, stroke:#888
+    H1["Detection metrics"]
+    H2["Classification metrics"]
+end
+
+G2 --> H1
+G2 --> H2
+
+H1 --> I1
+H2 --> I1
+
+I1["Final results"]
+I1 --> J1["Detected planets & objects
+Classified types, estimated properties"]
+
+%% COLOR STYLING
+
+style A1 fill:#7a2e1c,color:#fff,stroke:#7a2e1c
+style A2 fill:#7a2e1c,color:#fff,stroke:#7a2e1c
+
+style B1 fill:#555,color:#fff,stroke:#555
+
+style B2 fill:#0f5c4a,color:#fff,stroke:#0f5c4a
+
+style C1 fill:#4b3f99,color:#fff,stroke:#4b3f99
+style C2 fill:#4b3f99,color:#fff,stroke:#4b3f99
+
+style D1 fill:#7a2e1c,color:#fff,stroke:#7a2e1c
+style D2 fill:#7a2e1c,color:#fff,stroke:#7a2e1c
+style D3 fill:#4b3f99,color:#fff,stroke:#4b3f99
+
+style E1 fill:#1f4e79,color:#fff,stroke:#1f4e79
+style E2 fill:#1f4e79,color:#fff,stroke:#1f4e79
+
+style F1 fill:#0f5c4a,color:#fff,stroke:#0f5c4a
+
+style G1 fill:#3b3486,color:#fff,stroke:#3b3486
+style G2 fill:#3b3486,color:#fff,stroke:#3b3486
+
+style H1 fill:#0f5c4a,color:#fff,stroke:#0f5c4a
+style H2 fill:#7a2e1c,color:#fff,stroke:#7a2e1c
+
+style I1 fill:#555,color:#fff,stroke:#555
+style J1 fill:#555,color:#fff,stroke:#555
 ```
 
 ---
