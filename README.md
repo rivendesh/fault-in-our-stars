@@ -196,3 +196,5 @@ To sum things up, here's how these sources compare with what they return and wha
 > 6. [Kaggle Notebook on Exoplanet Detection with CNNs](https://www.kaggle.com/code/huyghens/ai-model-for-the-detection-of-exoplanets/notebook#Future-work)
 > 7. [Kaggle Notebook AI Model for the Detection of Exoplanets](https://www.kaggle.com/code/jaimetrickz/exoplanet-classification/notebook#KNN-Classifier)
 > 8. [Kepler Eclipsing Binary Catalog](https://keplerebs.villanova.edu/)
+> 9. [MAST X Kepler Documentation](https://archive.stsci.edu/missions-and-data/kepler)
+> 10. [Working with Time Series Data with `astropy`](https://docs.astropy.org/en/stable/timeseries/analysis.html)
