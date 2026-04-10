@@ -18,6 +18,10 @@
   - [ ] Use similar methods to pull data for variable stars and confirmed planets
   - [ ] Turn these notebooks/scripts into functions and possibly run a bash script to compile data
 
+---
+
+- [ ] 
+
 ## Introduction
 
 Project for CSCI 567 Machine Learning in Spring 2026 on light curve analysis of distant stars to detect exoplanets.
@@ -198,4 +202,6 @@ To sum things up, here's how these sources compare with what they return and wha
 > 8. [Kepler Eclipsing Binary Catalog](https://keplerebs.villanova.edu/)
 > 9. [MAST X Kepler Documentation](https://archive.stsci.edu/missions-and-data/kepler)
 > 10. [Working with Time Series Data with `astropy`](https://docs.astropy.org/en/stable/timeseries/analysis.html)
+> 11. https://lightkurve.github.io/lightkurve/tutorials/3-science-examples/exoplanets-identifying-transiting-planet-signals.html
+> 12. 
 ****
