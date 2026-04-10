@@ -203,5 +203,5 @@ To sum things up, here's how these sources compare with what they return and wha
 > 9. [MAST X Kepler Documentation](https://archive.stsci.edu/missions-and-data/kepler)
 > 10. [Working with Time Series Data with `astropy`](https://docs.astropy.org/en/stable/timeseries/analysis.html)
 > 11. https://lightkurve.github.io/lightkurve/tutorials/3-science-examples/exoplanets-identifying-transiting-planet-signals.html
-> 12. 
+> 12. [Variable Star Catalog](https://arxiv.org/abs/1502.04004?utm_source=chatgpt.com)
 ****
