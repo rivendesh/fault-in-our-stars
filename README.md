@@ -161,7 +161,6 @@ These methods vary with different levels of convenience (and ease-of-use in synt
 [1]: https://astroquery.readthedocs.io/en/latest/mast/mast_obsquery.html "Observation Queries — astroquery v0.1.dev269+gf7db6753c"
 [2]: https://astroquery.readthedocs.io/en/stable/mast/mast.html "MAST Queries (astroquery.mast) — astroquery v0.4.11"
 [3]: https://lightkurve.github.io/lightkurve/tutorials/1-getting-started/searching-for-data-products.html "Searching & downloading Kepler, K2, and TESS data — Lightkurve "
-[4]: https://lightkurve.github.io/lightkurve/reference/search.html "Downloading data — Lightkurve "
 [5]: https://lightkurve.github.io/lightkurve/reference/api/lightkurve.search_lightcurve.html "lightkurve.search_lightcurve — Lightkurve "
 
 Before we can apply machine learning techniques, or even build the combined dataset, we need to explore these ways of fetching MAST data and compare them for efficiency and use-case.
@@ -177,7 +176,6 @@ To sum things up, here's how these sources compare with what they return and wha
 [1]: https://astroquery.readthedocs.io/en/latest/mast/mast_obsquery.html "Observation Queries — astroquery v0.1.dev269+gf7db6753c"
 [2]: https://astroquery.readthedocs.io/en/stable/mast/mast.html "MAST Queries (astroquery.mast) — astroquery v0.4.11"
 [3]: https://lightkurve.github.io/lightkurve/reference/api/lightkurve.search_lightcurve.html "lightkurve.search_lightcurve — Lightkurve "
-[4]: https://lightkurve.github.io/lightkurve/reference/search.html "Downloading data — Lightkurve "
 
 > [!CAUTION]
 > This comparison is what we hope to corroborate with experimentally in `test-code/compare-MAST-querying-methods.ipynb`.
@@ -200,4 +198,5 @@ To sum things up, here's how these sources compare with what they return and wha
 > 10. [Working with Time Series Data with `astropy`](https://docs.astropy.org/en/stable/timeseries/analysis.html)
 > 11. https://lightkurve.github.io/lightkurve/tutorials/3-science-examples/exoplanets-identifying-transiting-planet-signals.html
 > 12. [Variable Star Catalog](https://arxiv.org/abs/1502.04004?utm_source=chatgpt.com)
+
 ****
