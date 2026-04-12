@@ -11,7 +11,7 @@
 ## Todo
 
 - [ ] Merge datasets
-  - [ ] The Data Challenge
+  - [X] The Data Challenge
   - [X] Pull data across sources for VKEB matching KICs
   - [ ] Use similar methods to pull data for variable stars and confirmed planets
   - [ ] Turn these notebooks/scripts into functions and possibly run a bash script to compile data
