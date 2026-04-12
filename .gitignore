@@ -6,3 +6,6 @@
 
 # Jupyter Notebook Checkpoints
 .ipynb_checkpoints/
+
+# Data
+assets/data
