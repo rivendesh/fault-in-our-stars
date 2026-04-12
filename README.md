@@ -11,10 +11,8 @@
 ## Todo
 
 - [ ] Merge datasets
-  - [ ] Figure out why it takes 40s to query NASAExpArch
-    - [ ] `compare-MAST-querying-methods.ipynb`
-    - [ ] The Data Challenge
-  - [ ] Pull data across sources for VKEB matching KICs
+  - [ ] The Data Challenge
+  - [X] Pull data across sources for VKEB matching KICs
   - [ ] Use similar methods to pull data for variable stars and confirmed planets
   - [ ] Turn these notebooks/scripts into functions and possibly run a bash script to compile data
 
