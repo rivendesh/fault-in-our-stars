@@ -2,7 +2,6 @@ import re
 import requests
 from pathlib import Path
 
-# sample KICs (replace later with your dataset)
 kics = [
     3863594,
     10417986,
@@ -37,7 +36,7 @@ for kic in kics:
     lines.append(f"# KIC {kic}")
     for f in files:
         full_url = url + f
-        lines.append(f"curl -O {full_url}")  # <-- no quotes here
+        lines.append(f"curl -O {full_url}")  
     lines.append("")
 
 # write script
