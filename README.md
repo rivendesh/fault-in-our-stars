@@ -13,8 +13,10 @@
 - [ ] Merge datasets
   - [X] The Data Challenge
   - [X] Pull data across sources for VKEB matching KICs
-  - [ ] Use similar methods to pull data for variable stars and confirmed planets
+  - [ ] Pull LCs for variable stars (K & D)
+) - [ ] Pull LCs for confirmed planets (Tom & Jerry)
   - [ ] Turn these notebooks/scripts into functions and possibly run a bash script to compile data
+    - [ ] `Create load-data/`
 
 ---
 
