@@ -18,6 +18,7 @@
   ) - [ ] Confirmed planets (Tom & Jerry) - Using KOI resolution helpers
   - [ ] Turn these notebooks/scripts into functions and possibly run a bash script to compile data
     - [ ] `Create load-data/`
+- [ ] Work on documentation
 
 ---
 
