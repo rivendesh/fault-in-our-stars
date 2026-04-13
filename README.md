@@ -20,7 +20,9 @@
       - [X] Convert curl commands to .txt file of links
       - [X] Download KIC LCs with links
       - [X] Load and inspect LCs from downloaded LC `.fits` files
-      - [ ] ==Test at scale==
+      - Testing
+        - [ ] Sample LCs in K2VC similarly to KEB
+        - [ ] Test at scale for both
   - [ ] Pull data from other sources
     - [ ] Variable stars (K & D)
       - [ ] Cross-match records in Full Variability Catalog by (RA, DEC) position to remove duplicates
@@ -211,10 +213,6 @@ To sum things up, here's how these sources compare with what they return and wha
 | **Kepler/K2 mission helper** (`astroquery.mast` mission search / `MastMissionsClass`) | **Middle layer / mission-specific control**            | Kepler/K2-only mission searches instead of the whole archive. Astroquery describes `MastClass` as direct programmatic access to the MAST Portal, alongside `ObservationsClass` for observational data. ([astroquery.readthedocs.io][2]) | Mission-scoped result tables and downloads. ([astroquery.readthedocs.io][2])                                                               | Good when your pipeline is **Kepler/K2-only** and you want to avoid broader archive logic. At scale, it reduces complexity compared with `Observations`, but it is still more manual than Lightkurve because you are still working close to archive/query concepts. This is an inference from the documented API structure. ([astroquery.readthedocs.io][2])                |
 | **Lightkurve**                                                                        | **Highest-level / most opinionated convenience layer** | Light curves and target pixel files for Kepler/K2/TESS. Its `search_lightcurve()` accepts target names, KIC/EPIC IDs, coordinates, and mission filters such as `Kepler` and `K2`. ([lightkurve.github.io][3])                           | A `SearchResult` object with built-in filtering and download helpers like `.download()` and `.download_all()`. ([lightkurve.github.io][4]) | Easiest for many light-curve workflows, but at scale it is more “one target / one product family” oriented. That means it is excellent for building a Kepler/K2 light-curve pipeline, but less flexible for archive-wide discovery or non-light-curve products. This is an inference from the documented search scope and API shape. ([lightkurve.github.io][3])            |
 
-[1]: https://astroquery.readthedocs.io/en/latest/mast/mast_obsquery.html "Observation Queries — astroquery v0.1.dev269+gf7db6753c"
-[2]: https://astroquery.readthedocs.io/en/stable/mast/mast.html "MAST Queries (astroquery.mast) — astroquery v0.4.11"
-[3]: https://lightkurve.github.io/lightkurve/reference/api/lightkurve.search_lightcurve.html "lightkurve.search_lightcurve — Lightkurve "
-
 > [!CAUTION]
 > This comparison is what we hope to corroborate with experimentally in `test-code/compare-MAST-querying-methods.ipynb`.
 
@@ -234,6 +232,6 @@ To sum things up, here's how these sources compare with what they return and wha
 > 8. [Kepler Eclipsing Binary Catalog](https://keplerebs.villanova.edu/)
 > 9. [MAST X Kepler Documentation](https://archive.stsci.edu/missions-and-data/kepler)
 > 10. [Working with Time Series Data with `astropy`](https://docs.astropy.org/en/stable/timeseries/analysis.html)
-> 11. https://lightkurve.github.io/lightkurve/tutorials/3-science-examples/exoplanets-identifying-transiting-planet-signals.html
+> 11. <https://lightkurve.github.io/lightkurve/tutorials/3-science-examples/exoplanets-identifying-transiting-planet-signals.html>
 > 12. [Variable Star Catalog](https://arxiv.org/abs/1502.04004?utm_source=chatgpt.com)
 > 13. [K2VarCat Data Access Instructions](https://archive.stsci.edu/prepds/k2varcat/#dataaccess)
