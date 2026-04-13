@@ -3,7 +3,7 @@
 - [567 Machine Learning Project - Spring 2026](#567-machine-learning-project---spring-2026)
   - [Todo](#todo)
   - [Introduction](#introduction)
-  - [Combined Project Flowchart](#combined-project-flowchart)
+  - [Project Flowchart](#project-flowchart)
   - [Challenges](#challenges)
     - [Funky File Handling \& Downloads for K2VarCat](#funky-file-handling--downloads-for-k2varcat)
     - [The Data Challenge](#the-data-challenge)
@@ -14,6 +14,8 @@
 - [ ] Merge datasets
   - [X] The Data Challenge
   - [X] Pull data across sources for VKEB matching KICs
+      - [ ] Test workflow outside of `pandas`
+      - [ ] 
   - [ ] Pull data from other sources
     - [ ] Variable stars (K & D)
       - [ ] Cross-match records in Full Variability Catalog by (RA, DEC) position to remove duplicates
@@ -28,7 +30,7 @@
 
 Project for CSCI 567 Machine Learning in Spring 2026 on light curve analysis of distant stars to detect exoplanets.
 
-## Combined Project Flowchart
+## Project Flowchart
 
 ```mermaid
 flowchart TD
@@ -157,7 +159,7 @@ Used the following command to extract 7000+ MAST links:
 awk '/^curl -O / {print $3}' k2varcat-c{01,02,03,04}_curl.sh > k2-c{01,02,03,04}-urls.txt
 ```
 
-And using `aria2` to download them all with parallelism using:
+And using `aria2` to download them all with parallel processing:
 
 ```bash
 aria2c \
