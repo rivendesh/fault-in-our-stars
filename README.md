@@ -16,6 +16,11 @@
   - [X] Pull data across sources for VKEB matching KICs
     - [X] Test workflow outside of `pandas`
     - [ ] Test creating stacks of curls for KICs
+      - [X] Dynamically generate script of curl commands for each KIC in list of KICs
+      - [X] Convert curl commands to .txt file of links
+      - [X] Download KIC LCs with links
+      - [X] Load and inspect LCs from downloaded LC `.fits` files
+      - [ ] ==Test at scale==
   - [ ] Pull data from other sources
     - [ ] Variable stars (K & D)
       - [ ] Cross-match records in Full Variability Catalog by (RA, DEC) position to remove duplicates
