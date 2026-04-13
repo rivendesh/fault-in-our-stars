@@ -15,6 +15,7 @@
   - [X] Pull data across sources for VKEB matching KICs
   - [ ] Pull data from other sources
     - [ ] Variable stars (K & D)
+      - [ ] Cross-match records in Full Variability Catalog by (RA, DEC) position to remove duplicates
     - [ ] Confirmed planets (Tom & Jerry) - Using KOI resolution helpers
     - [ ] Turn these notebooks/scripts into functions and possibly run a bash script to compile data
     - [ ] `Create load-data/`
@@ -202,5 +203,3 @@ To sum things up, here's how these sources compare with what they return and wha
 > 11. https://lightkurve.github.io/lightkurve/tutorials/3-science-examples/exoplanets-identifying-transiting-planet-signals.html
 > 12. [Variable Star Catalog](https://arxiv.org/abs/1502.04004?utm_source=chatgpt.com)
 > 13. [K2VarCat Data Access Instructions](https://archive.stsci.edu/prepds/k2varcat/#dataaccess)
-
-****
