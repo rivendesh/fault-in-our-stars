@@ -5,6 +5,7 @@
   - [Introduction](#introduction)
   - [Combined Project Flowchart](#combined-project-flowchart)
   - [Challenges](#challenges)
+    - [Funky File Handling](#funky-file-handling)
     - [The Data Challenge](#the-data-challenge)
   - [Links \& References](#links--references)
 
@@ -147,6 +148,13 @@ style J1 fill:#555,color:#fff,stroke:#555
 ```
 
 ## Challenges
+
+### Funky File Handling
+
+Used the following command to extract 7000+ MAST links:
+```bash
+awk '/^curl -O / {print $3}' k2varcat-c{01,02,03,04}_curl.sh > k2-c{01,02,03,04}-urls.txt
+```
 
 ### The Data Challenge
 
