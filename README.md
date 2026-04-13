@@ -21,7 +21,7 @@
       - [X] Download KIC LCs with links
       - [X] Load and inspect LCs from downloaded LC `.fits` files
       - Testing
-        - [ ] Sample LCs in K2VC similarly to KEB
+        - [X] Sample LCs in K2VC similarly to KEB
         - [ ] Test at scale for both
   - [ ] Pull data from other sources
     - [ ] Variable stars (K & D)
