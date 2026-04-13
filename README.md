@@ -5,7 +5,7 @@
   - [Introduction](#introduction)
   - [Combined Project Flowchart](#combined-project-flowchart)
   - [Challenges](#challenges)
-    - [Funky File Handling](#funky-file-handling)
+    - [Funky File Handling \& Downloads for K2VarCat](#funky-file-handling--downloads-for-k2varcat)
     - [The Data Challenge](#the-data-challenge)
   - [Links \& References](#links--references)
 
@@ -149,11 +149,29 @@ style J1 fill:#555,color:#fff,stroke:#555
 
 ## Challenges
 
-### Funky File Handling
+### Funky File Handling & Downloads for K2VarCat
 
 Used the following command to extract 7000+ MAST links:
+
 ```bash
 awk '/^curl -O / {print $3}' k2varcat-c{01,02,03,04}_curl.sh > k2-c{01,02,03,04}-urls.txt
+```
+
+And using `aria2` to download them all with parallelism using:
+
+```bash
+aria2c \
+  -i /tmp/k2_urls.txt \
+  -d . \
+  -j 10 \
+  -x 1 \
+  -s 1 \
+  -c \
+  --max-tries=0 \
+  --retry-wait=5 \
+  --timeout=60 \
+  --connect-timeout=60 \
+  --check-integrity=true
 ```
 
 ### The Data Challenge
