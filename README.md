@@ -14,8 +14,8 @@
 - [ ] Merge datasets
   - [X] The Data Challenge
   - [X] Pull data across sources for VKEB matching KICs
-      - [ ] Test workflow outside of `pandas`
-      - [ ] 
+    - [X] Test workflow outside of `pandas`
+    - [ ] Test creating stacks of curls for KICs
   - [ ] Pull data from other sources
     - [ ] Variable stars (K & D)
       - [ ] Cross-match records in Full Variability Catalog by (RA, DEC) position to remove duplicates
