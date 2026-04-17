@@ -15,20 +15,26 @@
   - [X] The Data Challenge
   - [X] Pull data across sources for VKEB matching KICs
     - [X] Test workflow outside of `pandas`
-    - [ ] Test creating stacks of curls for KICs
+    - [X] Test creating stacks of curls for KICs
       - [X] Dynamically generate script of curl commands for each KIC in list of KICs
       - [X] Convert curl commands to .txt file of links
       - [X] Download KIC LCs with links
       - [X] Load and inspect LCs from downloaded LC `.fits` files
       - Testing
         - [X] Sample LCs in K2VC similarly to KEB
-        - [ ] Test at scale for both
   - [ ] Pull data from other sources
+    - [ ] KOI Cumulative Catalog - Tom and Jithin
+      - [ ] Generate `curl` scripts
+        - Hint: See `/test-code/create-list-curl-urls-kepler.py`
+      - [ ] Download LCs with as high fidelity as possible
+      - [ ] Extract LC arrays (time, flux, flux_err, n_points)
+      - [ ] Store in combined dataframe
+      - [ ] Pickle dataframe and upload to Google Drive
     - [ ] Variable stars (K & D)
-      - [ ] Cross-match records in Full Variability Catalog by (RA, DEC) position to remove duplicates
-    - [ ] Confirmed planets (Tom & Jerry) - Using KOI resolution helpers
-    - [ ] Turn these notebooks/scripts into functions and possibly run a bash script to compile data
+      - [ ] Decide how many records to get from K2VarCat (Discuss class imbalance)
+      - [ ] Download LCs, how many ever we need
     - [ ] `Create load-data/`
+- [ ] *Machine Learning When?*
 - [ ] Work on documentation
 
 ---
