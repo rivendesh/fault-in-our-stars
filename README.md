@@ -26,6 +26,7 @@
     - [ ] KOI Cumulative Catalog - Tom and Jithin
       - [ ] Generate `curl` scripts
         - Hint: See `/test-code/create-list-curl-urls-kepler.py`
+        - Seealso: `python3 get_kepler.py -h`
       - [ ] Download LCs with as high fidelity as possible
       - [ ] Extract LC arrays (time, flux, flux_err, n_points)
       - [ ] Store in combined dataframe
