@@ -21,7 +21,7 @@ def lookup_epochs(quarter, cadence):
                              '15':['2013011073258'],
                              '16':['2013098041711'],
                              '17':['2013131215648']}
-    
+
     SHORT_QUARTER_PREFIXES = {'0':['2009131110544'],
                               '1':['2009166044711'],
                               '2':['2009201121230', '2009231120729',
@@ -114,11 +114,11 @@ def get_kepler(idict):
             cadence_str = "_lpd-targ.fits.gz"
         else:
             cadence_str = "_spd-targ.fits.gz"
-    
+
     # Use all available quarters if neither 'epochs' or 'quarters' are specified.
     if epochs is None and quarters is None:
         quarters = [str(x) for x in xrange(18)]
-    
+
     # If 'kepids' is a scalar string put it in a list.  Same with 'epochs' and 'quarters'
     if isinstance(kepids,str):
         kepids = [kepids]
@@ -147,7 +147,7 @@ def get_kepler(idict):
                           ' expected number of files are successfully downloaded.\n')
 
     # Make sure file is executable.
-    os.chmod(ofile, 0744)
+    os.chmod(ofile, 0o0744)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Script to generate download commands given one or"
@@ -169,7 +169,7 @@ if __name__ == "__main__":
                         " = '%(default)s'.")
     epoch_quarter_group = parser.add_mutually_exclusive_group()
     epoch_quarter_group.add_argument("-e", action="store", type=str, dest="epochs", nargs="*", help=
-                                     "One or more epochs to retrieve with each Kepler ID.")    
+                                     "One or more epochs to retrieve with each Kepler ID.")
     epoch_quarter_group.add_argument("-q", action="store", type=str, dest="quarters", nargs="*",
                                      help="One or more quarters to retrieve with each Kepler ID.")
     args = vars(parser.parse_args())
