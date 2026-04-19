@@ -24,7 +24,7 @@
         - [X] Sample LCs in K2VC similarly to KEB
   - [ ] Pull data from other sources
     - [ ] KOI Cumulative Catalog - Tom and Jithin
-      - [ ] Generate `curl` scripts
+      - [X] Generate `curl` scripts
         - Hint: See `/test-code/create-list-curl-urls-kepler.py`
         - Seealso: `python3 get_kepler.py -h`
       - [ ] Download LCs with as high fidelity as possible
