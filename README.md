@@ -27,13 +27,13 @@
       - [X] Generate `curl` scripts
         - Hint: See `/test-code/create-list-curl-urls-kepler.py`
         - Seealso: `python3 get_kepler.py -h`
-      - [ ] Download LCs with as high fidelity as possible
-      - [ ] Extract LC arrays (time, flux, flux_err, n_points)
-      - [ ] Store in combined dataframe
-      - [ ] Pickle dataframe and upload to Google Drive
+      - [X] Download LCs with as high fidelity as possible
+      - [X] Extract LC arrays (time, flux, flux_err, n_points)
+      - [X] Store in combined dataframe
+      - [X] Pickle dataframe and upload to Google Drive
     - [ ] Variable stars (K & D)
-      - [ ] Decide how many records to get from K2VarCat (Discuss class imbalance)
-      - [ ] Download LCs, how many ever we need
+      - [X] Decide how many records to get from K2VarCat (Discuss class imbalance)
+      - [X] Download LCs, how many ever we need
     - [ ] `Create load-data/`
 - [ ] *Machine Learning When?*
 - [ ] Work on documentation
