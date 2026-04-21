@@ -22,8 +22,8 @@
       - [X] Load and inspect LCs from downloaded LC `.fits` files
       - Testing
         - [X] Sample LCs in K2VC similarly to KEB
-  - [ ] Pull data from other sources
-    - [ ] KOI Cumulative Catalog - Tom and Jithin
+  - [X] Pull data from other sources
+    - [X] KOI Cumulative Catalog - Tom and Jithin
       - [X] Generate `curl` scripts
         - Hint: See `/test-code/create-list-curl-urls-kepler.py`
         - Seealso: `python3 get_kepler.py -h`
@@ -31,11 +31,11 @@
       - [X] Extract LC arrays (time, flux, flux_err, n_points)
       - [X] Store in combined dataframe
       - [X] Pickle dataframe and upload to Google Drive
-    - [ ] Variable stars (K & D)
+    - [X] Variable stars (K & D)
       - [X] Decide how many records to get from K2VarCat (Discuss class imbalance)
       - [X] Download LCs, how many ever we need
-    - [ ] `Create load-data/`
-- [ ] *Machine Learning When?*
+    <!-- - [ ] `Create load-data/` -->
+- [ ] Machine Learning
 - [ ] Work on documentation
 
 ---
