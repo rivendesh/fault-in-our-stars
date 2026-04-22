@@ -34,6 +34,9 @@
     - [X] Variable stars (K & D)
       - [X] Decide how many records to get from K2VarCat (Discuss class imbalance)
       - [X] Download LCs, how many ever we need
+  - [ ] Put all datasets together
+    - [ ] Import all datasets
+    - [ ] Normalize, detrend
     <!-- - [ ] `Create load-data/` -->
 - [ ] Machine Learning
 - [ ] Work on documentation
