@@ -35,9 +35,9 @@
       - [X] Decide how many records to get from K2VarCat (Discuss class imbalance)
       - [X] Download LCs, how many ever we need
   - [ ] Put all datasets together
+    - [ ] Organize directory structure
     - [ ] Import all datasets
-    - [ ] Normalize, detrend
-    <!-- - [ ] `Create load-data/` -->
+    - [ ] Normalize, de-trend
 - [ ] Machine Learning
 - [ ] Work on documentation
 
