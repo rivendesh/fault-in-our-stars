@@ -131,7 +131,6 @@ def plotLightCurveFromFITS(fits_file_path):
     gc.collect()
 
 
-
 def sampleRandomKIC(df):
     """Samples a random KIC value from the DataFrame index."""
     return np.random.choice(df.index)
