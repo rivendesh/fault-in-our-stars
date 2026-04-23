@@ -8,5 +8,4 @@
 .ipynb_checkpoints/
 
 # Data
-assets/data
-assets/k2-variable-campaigns/lightcurves
+data/
