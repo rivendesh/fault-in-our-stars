@@ -37,7 +37,7 @@
   - [ ] Put all datasets together
     - [X] Organize directory structure
     - [X] Import all datasets
-    - [ ] Normalize, de-trend
+    - [ ] Normalize, de-trend KCC
 - [ ] Machine Learning
 - [ ] Work on documentation
 
@@ -246,3 +246,4 @@ To sum things up, here's how these sources compare with what they return and wha
 > 12. [Variable Star Catalog](https://arxiv.org/abs/1502.04004?utm_source=chatgpt.com)
 > 13. [K2VarCat Data Access Instructions](https://archive.stsci.edu/prepds/k2varcat/#dataaccess)
 > 14. [Index of Kepler Software](https://archive.stsci.edu/kepler/software/)
+> 15. [Processing Huge Datasets in Pandas by Chunking (Video)](https://www.youtube.com/watch?v=xtFo1IiZqzM)
