@@ -7,33 +7,77 @@ import lightkurve as lk
 from lightkurve import search_lightcurve
 
 
-def plotLightCurve(df, kic, with_error=True):
+def plotLightCurve(df: pd.DataFrame, kic: int, with_error: bool = True):
     """
-    Plot the light curve for a given KIC from a DataFrame.
+    Plots the light curve for a given KIC from a DataFrame.
+    Assumes KIC is the index of the input DataFrame 'df'.
     """
-    row = df[df["KIC"] == kic]
+    # 1. Retrieve the entire row using the index label 'kic'
+    # This returns a Pandas Series object, which is what we want.
+    try:
+        row_series = df.loc[kic]
+    except KeyError:
+        raise ValueError(f"KIC {kic} not found in DataFrame index.")
     
-    if row.empty:
-        raise ValueError(f"KIC {kic} not found in DataFrame.")
-    
-    row = row.iloc[0]
-    
-    t = row["time"]
-    f = row["flux"]
-    e = row.get("flux_err", None)
+    # Check if the retrieved row is empty (though KeyError should handle most missing cases)
+    if row_series.empty:
+        raise ValueError(f"KIC {kic} resulted in an empty record in the DataFrame.")
 
-    # Plot
+    # 2. Access data directly using string keys on the Series
+    t = row_series["time"]
+    f = row_series["flux"]
+    e = row_series.get("flux_err", None)
+
+    # 3. Plotting
     plt.figure(figsize=(20, 5))
-    
     if with_error and e is not None:
         plt.errorbar(t, f, yerr=e, fmt='-', linewidth=1)
     else:
         plt.plot(t, f, linewidth=1)
-    
+        
     plt.xlabel("Time")
     plt.ylabel(r"Normalized Flux (e$^{-}$ s$^{-1}$)")
     plt.title(f"KIC {kic} Light Curve")
     plt.show()
+    
+    plt.close()
+
+    
+def saveLightCurve(df: pd.DataFrame, kic: int, with_error: bool = True):
+    """
+    Plots the light curve for a given KIC from a DataFrame.
+    Assumes KIC is the index of the input DataFrame 'df'.
+    """
+    # 1. Retrieve the entire row using the index label 'kic'
+    # This returns a Pandas Series object, which is what we want.
+    try:
+        row_series = df.loc[kic]
+    except KeyError:
+        raise ValueError(f"KIC {kic} not found in DataFrame index.")
+    
+    # Check if the retrieved row is empty (though KeyError should handle most missing cases)
+    if row_series.empty:
+        raise ValueError(f"KIC {kic} resulted in an empty record in the DataFrame.")
+
+    # 2. Access data directly using string keys on the Series
+    t = row_series["time"]
+    f = row_series["flux"]
+    e = row_series.get("flux_err", None)
+
+    # 3. Plotting
+    plt.figure(figsize=(20, 5))
+    plt.plot(t, f, linewidth=1)
+    
+    plt.xlabel("Time")
+    plt.ylabel(r"Normalized Flux (e$^{-}$ s$^{-1}$)")
+    plt.title(f"KIC {kic} Light Curve")
+    # plt.show()
+    
+    filename = f"light_curve_{kic}.png"
+    plt.savefig(filename)
+
+    plt.close()
+
 
 
 def plotLightCurveFromFITS(fits_file_path):
