@@ -11,7 +11,11 @@
 
 ## Todo
 
-- [ ] Merge datasets
+- [ ] Machine Learning
+  - [ ] Jithin's working on LSTMs
+  - [ ] Desh's working on CNNs
+- [ ] Work on documentation
+- [X] Merge datasets
   - [X] The Data Challenge
   - [X] Pull data across sources for VKEB matching KICs
     - [X] Test workflow outside of `pandas`
@@ -34,12 +38,10 @@
     - [X] Variable stars (K & D)
       - [X] Decide how many records to get from K2VarCat (Discuss class imbalance)
       - [X] Download LCs, how many ever we need
-  - [ ] Put all datasets together
+  - [X] Put all datasets together
     - [X] Organize directory structure
     - [X] Import all datasets
-    - [ ] Normalize, de-trend KCC
-- [ ] Machine Learning
-- [ ] Work on documentation
+    - [X] Normalize, de-trend KCC
 
 ---
 
