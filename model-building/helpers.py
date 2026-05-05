@@ -46,8 +46,7 @@ def plotLightCurveFromDF(df: pd.DataFrame, kic: int, with_error: bool = True):
     
 def saveLightCurveFromDF(df: pd.DataFrame, kic: int, outputDirectory = r'./'):
     """
-    Plots the light curve for a given KIC from a DataFrame.
-    Assumes KIC is the index of the input DataFrame 'df'.
+    Saves the light curve for a given KIC from a DataFrame, to a specified output directory.
     """
     try:
         row_series = df.loc[kic]
@@ -68,24 +67,17 @@ def saveLightCurveFromDF(df: pd.DataFrame, kic: int, outputDirectory = r'./'):
     plt.ylabel(r"Normalized Flux (e$^{-}$ s$^{-1}$)")
     plt.title(f"KIC {kic} Light Curve")
     
-    # filename = f"light_curve_{kic}.png"
-    # plt.savefig(filename)
-
-    # --- Saving the Figure ---
     try:
-        # 1. Ensure the output directory exists
         os.makedirs(outputDirectory, exist_ok=True)
         
-        # 2. Construct the full file path
-        filename = f"lightcurve_ID_{target_id}.png"
+        filename = f"lightcurve_ID_{kic}.png"
         save_path = os.path.join(outputDirectory, filename)
         
-        # 3. Save the figure
         plt.savefig(save_path)
-        print(f"\n✅ Success! Lightcurve for ID {kic} successfully saved to: {save_path}")
+        print(f"INFO: Success! Lightcurve for ID {kic} successfully saved to: {save_path}")
     
     except Exception as e:
-        print(f"\n❌ Failed to save the figure to {outputDirectory}. Error: {e}")
+        print(f"CRITICAL: Failed to save the figure to {outputDirectory}. Error: {e}")
     finally:
         # Always close the figure to free up memory
         plt.close()
