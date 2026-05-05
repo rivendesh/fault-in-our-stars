@@ -4,6 +4,9 @@
 # Mac virtual docs
 .virtual_documents/
 
+# Env user config
+.vscode/
+
 # Jupyter Notebook Checkpoints
 .ipynb_checkpoints/
 
