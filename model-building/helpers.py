@@ -1,3 +1,4 @@
+import os
 import gc
 import numpy as np
 import matplotlib.pyplot as plt
@@ -43,40 +44,53 @@ def plotLightCurveFromDF(df: pd.DataFrame, kic: int, with_error: bool = True):
     plt.close()
 
     
-def saveLightCurveFromDF(df: pd.DataFrame, kic: int, with_error: bool = True):
+def saveLightCurveFromDF(df: pd.DataFrame, kic: int, outputDirectory = r'./'):
     """
     Plots the light curve for a given KIC from a DataFrame.
     Assumes KIC is the index of the input DataFrame 'df'.
     """
-    # 1. Retrieve the entire row using the index label 'kic'
-    # This returns a Pandas Series object, which is what we want.
     try:
         row_series = df.loc[kic]
     except KeyError:
         raise ValueError(f"KIC {kic} not found in DataFrame index.")
     
-    # Check if the retrieved row is empty (though KeyError should handle most missing cases)
     if row_series.empty:
         raise ValueError(f"KIC {kic} resulted in an empty record in the DataFrame.")
 
-    # 2. Access data directly using string keys on the Series
     t = row_series["time"]
     f = row_series["flux"]
     e = row_series.get("flux_err", None)
 
-    # 3. Plotting
     plt.figure(figsize=(20, 5))
     plt.plot(t, f, linewidth=1)
     
     plt.xlabel("Time")
     plt.ylabel(r"Normalized Flux (e$^{-}$ s$^{-1}$)")
     plt.title(f"KIC {kic} Light Curve")
-    # plt.show()
     
-    filename = f"light_curve_{kic}.png"
-    plt.savefig(filename)
+    # filename = f"light_curve_{kic}.png"
+    # plt.savefig(filename)
 
-    plt.close()
+    # --- Saving the Figure ---
+    try:
+        # 1. Ensure the output directory exists
+        os.makedirs(outputDirectory, exist_ok=True)
+        
+        # 2. Construct the full file path
+        filename = f"lightcurve_ID_{target_id}.png"
+        save_path = os.path.join(outputDirectory, filename)
+        
+        # 3. Save the figure
+        plt.savefig(save_path)
+        print(f"\n✅ Success! Lightcurve for ID {kic} successfully saved to: {save_path}")
+    
+    except Exception as e:
+        print(f"\n❌ Failed to save the figure to {outputDirectory}. Error: {e}")
+    finally:
+        # Always close the figure to free up memory
+        plt.close()
+
+    # plt.close()
 
 
 def plotLightCurveFromFITS(fits_file_path):
