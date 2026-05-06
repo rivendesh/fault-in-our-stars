@@ -13,7 +13,12 @@
 
 - [ ] Machine Learning
   - [ ] Jithin's working on LSTMs
-  - [ ] Desh's working on CNNs
+  - [ ] Desh's working on TCNs
+    - [ ] Build a TCN model that classifies LCs from raw 1-D data
+      - [ ] Filter out dupes
+      - [ ] Normalize inputs to fixed length
+      - [ ] Build Model
+      - [ ] TRAIN!
 - [ ] Work on documentation
 - [X] Merge datasets
   - [X] The Data Challenge
@@ -249,3 +254,4 @@ To sum things up, here's how these sources compare with what they return and wha
 > 13. [K2VarCat Data Access Instructions](https://archive.stsci.edu/prepds/k2varcat/#dataaccess)
 > 14. [Index of Kepler Software](https://archive.stsci.edu/kepler/software/)
 > 15. [Processing Huge Datasets in Pandas by Chunking (Video)](https://www.youtube.com/watch?v=xtFo1IiZqzM)
+> 16. [Medium Article on TCNs](https://medium.com/@rehan020345/understanding-temporal-convolutional-networks-tcns-from-cnn-basics-to-full-sequence-mastery-57d0804ad8c8)
