@@ -15,8 +15,9 @@
   - [ ] Jithin's working on LSTMs
   - [ ] Kratika's working on RF and XGBoost
     - [X] Preprocessed dataset
-    - [ ] Convert arrays into fixed sized features
-    - [ ] Build RF
+    - [X] Convert arrays into fixed sized features
+    - [X] Build RF
+      - [ ] Improve RF with stricter class weights
     - [ ] Build XGBoost
   - [ ] Desh's working on TCNs
     - [X] Build a TCN model that classifies LCs from raw 1-D data
