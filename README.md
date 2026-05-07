@@ -19,11 +19,12 @@
     - [ ] Build RF
     - [ ] Build XGBoost
   - [ ] Desh's working on TCNs
-    - [ ] Build a TCN model that classifies LCs from raw 1-D data
-      - [ ] Filter out dupes
-      - [ ] Normalize inputs to fixed length
-      - [ ] Build Model
-      - [ ] TRAIN!
+    - [X] Build a TCN model that classifies LCs from raw 1-D data
+      - [X] Filter out dupes
+      - [X] Normalize inputs to fixed length
+      - [X] Build Model
+      - [X] TRAIN!
+      - [ ] Improve TCN model
 - [ ] Work on documentation
 - [X] Merge datasets
   - [X] The Data Challenge
