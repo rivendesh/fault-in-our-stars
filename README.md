@@ -13,6 +13,11 @@
 
 - [ ] Machine Learning
   - [ ] Jithin's working on LSTMs
+  - [ ] Kratika's working on RF and XGBoost
+    - [X] Preprocessed dataset
+    - [ ] Convert arrays into fixed sized features
+    - [ ] Build RF
+    - [ ] Build XGBoost
   - [ ] Desh's working on TCNs
     - [ ] Build a TCN model that classifies LCs from raw 1-D data
       - [ ] Filter out dupes
