@@ -13,12 +13,11 @@
 
 - [ ] Machine Learning
   - [ ] Jithin's working on LSTMs
-  - [ ] Kratika's working on RF and XGBoost
+  - [X] Kratika's working on RF and XGBoost
     - [X] Preprocessed dataset
     - [X] Convert arrays into fixed sized features
     - [X] Build RF
-      - [ ] Improve RF with stricter class weights
-    - [ ] Build XGBoost
+      - [X] Improve RF with stricter class weights
   - [ ] Desh's working on TCNs
     - [X] Build a TCN model that classifies LCs from raw 1-D data
       - [X] Filter out dupes
