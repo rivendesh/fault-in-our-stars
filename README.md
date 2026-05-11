@@ -11,20 +11,20 @@
 
 ## Todo
 
-- [ ] Machine Learning
-  - [ ] Jithin's working on LSTMs
+- [X] Machine Learning
+  - [X] Jithin's working on LSTMs
   - [X] Kratika's working on RF and XGBoost
     - [X] Preprocessed dataset
     - [X] Convert arrays into fixed sized features
     - [X] Build RF
       - [X] Improve RF with stricter class weights
-  - [ ] Desh's working on TCNs
+  - [X] Desh's working on TCNs
     - [X] Build a TCN model that classifies LCs from raw 1-D data
       - [X] Filter out dupes
       - [X] Normalize inputs to fixed length
       - [X] Build Model
       - [X] TRAIN!
-      - [ ] Improve TCN model
+      - [X] Improve TCN model
 - [ ] Work on documentation
 - [X] Merge datasets
   - [X] The Data Challenge
