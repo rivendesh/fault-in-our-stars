@@ -75,50 +75,11 @@ Contains:
 
 ---
 
-## 📊 Generating Results
-
-All results in the report can be reproduced by running the scripts inside each model directory.
-
-### Example workflows
-
-**LSTM / Transformer**
-
-```bash
-cd model-building/LSTMs\ and\ Transformers
-python train.py
-```
-
-**TCN**
-
-```bash
-cd model-building/TCNs
-python train.py
-```
-
-**Random Forest**
-
-```bash
-cd model-building/Random\ Forests
-python train_rf.py
-```
-
----
-
 ## 📈 Outputs
 
 - Plots and saved figures → `assets/`
 - Intermediate experiments → `exploratory-notebooks/`
 - Logs and model outputs → stored within respective model folders
-
----
-
-## 🛠 Utilities
-
-Common helper functions (plotting, saving outputs, etc.) can be found in:
-
-```
-model-building/helpers.py
-```
 
 ---
 
