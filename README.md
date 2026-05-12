@@ -1,3 +1,145 @@
+# Fault in Our Stars 🌟
+
+This repository contains implementations and experiments for multiple machine learning models, including:
+
+- LSTMs and Transformers
+- Temporal Convolutional Networks (TCNs)
+- Random Forests
+
+---
+
+## 🚀 Setup Instructions
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/fault-in-our-stars.git
+cd fault-in-our-stars
+```
+
+### 2. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 📂 Repository Structure
+
+```
+fault-in-our-stars/
+│
+├── assets/                     # Plots, figures, saved outputs
+├── exploratory-notebooks/      # Jupyter notebooks for data extraction and merging
+├── model-building/             # Core model implementations
+│   ├── LSTMs and Transformers/
+│   ├── TCNs/
+│   ├── Random Forests/
+│   └── helpers.py              # Utility functions (plotting, preprocessing)
+│
+├── test-code/                  # Testing scripts and experimental code
+├── requirements.txt            # Python dependencies
+├── README.md                   # Project documentation
+└── LICENSE
+```
+
+---
+
+## 🧠 Models Implemented
+
+### 1. LSTMs and Transformers
+
+**Location:** `model-building/LSTMs and Transformers/`
+
+Contains:
+- LSTM model implementations
+- Transformer architectures
+- Training scripts and configurations
+
+### 2. Temporal Convolutional Networks (TCNs)
+
+**Location:** `model-building/TCNs/`
+
+Contains:
+- TCN architecture implementations
+- Sequence modeling experiments
+
+### 3. Random Forests
+
+**Location:** `model-building/Random Forests/`
+
+Contains:
+- Baseline ML models
+- Feature-based approaches
+
+---
+
+## 📊 Generating Results
+
+All results in the report can be reproduced by running the scripts inside each model directory.
+
+### Example workflows
+
+**LSTM / Transformer**
+
+```bash
+cd model-building/LSTMs\ and\ Transformers
+python train.py
+```
+
+**TCN**
+
+```bash
+cd model-building/TCNs
+python train.py
+```
+
+**Random Forest**
+
+```bash
+cd model-building/Random\ Forests
+python train_rf.py
+```
+
+---
+
+## 📈 Outputs
+
+- Plots and saved figures → `assets/`
+- Intermediate experiments → `exploratory-notebooks/`
+- Logs and model outputs → stored within respective model folders
+
+---
+
+## 🛠 Utilities
+
+Common helper functions (plotting, saving outputs, etc.) can be found in:
+
+```
+model-building/helpers.py
+```
+
+---
+
+## 📝 Notes
+
+- Some folders (e.g., `test-code/`) contain experimental or backup code.
+- `.vscode/` contains local editor configurations and can be ignored.
+- `.DS_Store` is a system file and not relevant to the project.
+
+---
+
+## 📌 Summary
+
+To reproduce results:
+
+1. Clone the repo
+2. Install dependencies
+3. Navigate to the relevant model folder
+4. Run the corresponding training script
+
+
 # 567 Machine Learning Project - Spring 2026
 
 - [567 Machine Learning Project - Spring 2026](#567-machine-learning-project---spring-2026)
