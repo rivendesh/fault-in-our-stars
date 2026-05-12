@@ -52,26 +52,29 @@ fault-in-our-stars/
 
 **Location:** `model-building/LSTMs and Transformers/`
 
-Contains:
-- LSTM model implementations
-- Transformer architectures
-- Training scripts and configurations
+| File | Description |
+|---|---|
+| `time-series-analysis-1.ipynb` | Initial LSTM exploration and baseline |
+| `time-series-analysis-lstm-3models.ipynb` | Trains and compares 3 LSTM model variants |
+| `time-series-analysis-transformer-3models.ipynb` | Trains and compares 2 Transformer model variants |
 
 ### 2. Temporal Convolutional Networks (TCNs)
 
 **Location:** `model-building/TCNs/`
 
-Contains:
-- TCN architecture implementations
-- Sequence modeling experiments
+| File | Description |
+|---|---|
+| `1-merge-datasets.ipynb` | Merges and preprocesses datasets for TCN training |
+| `2-build-TCN.ipynb` | Defines and trains the TCN architecture |
+| `3-eval-model.ipynb` | Evaluates the trained TCN, generates confusion matrix and metrics |
 
 ### 3. Random Forests
 
 **Location:** `model-building/Random Forests/`
 
-Contains:
-- Baseline ML models
-- Feature-based approaches
+| File | Description |
+|---|---|
+| `RandomForests.ipynb` | Trains and evaluates the Random Forest baseline model |
 
 ---
 
